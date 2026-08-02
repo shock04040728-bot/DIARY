@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@300;400;500;700;900&family=Gowun+Dodum&family=Gowun+Batang&display=swap');
+
+@theme {
+  --font-sans: 'Noto Sans KR', Arial, sans-serif;
+  --font-serif: 'Noto Serif KR', 'Nanum Myeongjo', serif;
+  --font-nanum-gothic: 'Nanum Gothic', sans-serif;
+  --font-nanum-myeongjo: 'Nanum Myeongjo', serif;
+  --font-handwriting: 'Gowun Dodum', sans-serif;
+  
+  /* Create some base colors to be overridden in dark mode */
+  --color-bg-base: var(--bg-base);
+  --color-bg-panel: var(--bg-panel);
+  --color-bg-widget: var(--bg-widget);
+  --color-text-base: var(--text-base);
+  --color-text-muted: var(--text-muted);
+  --color-border: var(--border-color);
+  --color-brand: var(--brand-color);
+  --color-brand-hover: var(--brand-hover);
+  --color-accent-orange: var(--accent-orange);
+  --color-accent-blue: var(--accent-blue);
+}
+
+@layer base {
+  :root {
+    --bg-base: #f4f1ea; /* Soft beige */
+    --bg-panel: #ffffff;
+    --bg-widget: #fdfcfb;
+    --text-base: #3e3b38; /* Warm dark gray/brown */
+    --text-muted: #9c9589;
+    --border-color: #e5dfd3;
+    --brand-color: #637a67; /* Sage Green */
+    --brand-hover: #4f6353;
+    --accent-orange: #d48c70; /* Terracotta */
+    --accent-blue: #6a8caf; /* Soft Blue */
+  }
+  
+  .dark {
+    --bg-base: #1e1d1c;
+    --bg-panel: #2a2827;
+    --bg-widget: #33302f;
+    --text-base: #e6e2d8;
+    --text-muted: #8b867c;
+    --border-color: #403d3a;
+    --brand-color: #79917d;
+    --brand-hover: #91a895;
+    --accent-orange: #df9e85;
+    --accent-blue: #84a2c4;
+  }
+}
+
+body {
+  background-color: var(--color-bg-base);
+  color: var(--color-text-base);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+
